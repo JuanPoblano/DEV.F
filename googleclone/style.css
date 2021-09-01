@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+ box-sizing: border-box;
+ text-decoration: none
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block
+}
+@font-face{
+ font-family: "Roboto-Regular";
+ src: url("../googleclone/fonts/Roboto/Roboto-Regular.ttf")
+}
+
+
+html,body{
+ width: 100vw;
+ height: 100%;
+ font-family: "Roboto-Regular";
+ box-sizing: border-box
+}
+
+
+/*COMIENZA ESTILOS DEL header*/
+header{
+
+ height: 9%;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-end;
+ align-items: center;
+ padding-right: 10px
+}
+
+.divheader{
+ display: flex;
+ justify-content: space-between;
+ align-items: center
+
+}
+.header-link{
+color: rgba(0,0,0,0.87);
+font-size: 13px;
+font-weight: 400;
+margin: 10px
+}
+.header-link:hover{
+text-decoration: underline
+}
+
+.btnproducts{
+ display: flex;
+ width: 38px;
+ height: 38px;
+ border-radius: 50%;
+ justify-content: center;
+ align-items: center;
+ border: none;
+ background-color: transparent
+}
+
+.btnproducts:hover{
+background-color: #dfe1e2
+}
+
+.logoproducts{
+ fill: #5f6368;
+
+ cursor: pointer;
+ width: 24px
+}
+
+#acceder{
+cursor: pointer;
+color: #fff;
+background-clip: border-box;
+background-color: #1a73e8;
+border: 1px solid transparent;
+font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 0.25px;
+line-height: 16px;
+margin-left: 10px;
+margin-right: 8px;
+min-width: 96px;
+padding: 9px 23px;
+text-align: center;
+vertical-align: middle;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-moz-box-sizing: border-box;
+box-sizing: border-box
+}
+#acceder:hover{
+background: #2b7de9;
+box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15)
+}
+/*TERMINA ESTILOS DEL HEADER*/
+
+
+/*COMIENZA ESTILOS DEL MAIN*/
+main{
+
+ height: 77%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center
+
+}
+
+.seccionlogo{
+
+ display: flex;
+ justify-content: center;
+ margin: 1%
+}
+
+form{
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center
+}
+
+#busqueda{
+
+width: 584px;
+margin: 3%;
+background: #fff;
+display: flex;
+border: 1px solid #dfe1e5;
+box-shadow: none;
+border-radius: 24px;
+height: 44px;
+flex-direction: row;
+justify-content: center;
+align-items: center
+}
+#busqueda:hover{
+ box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15)
+}
+
+.lupa{
+ fill: rgb(154, 160, 166);
+ width: 20px
+
+}
+
+#input-search{
+
+ background-color:transparent;
+ border: none;
+ margin: 0;
+ padding: 0;
+ color: rgba(0,0,0,.87);
+ word-wrap: break-word;
+ outline: none;
+ -webkit-tap-highlight-color: transparent;
+ height: 42px;
+ width: 524px;
+ font-size: 16px;
+ margin-left: 10px
+
+}
+.btn-search{
+ background-color: #f8f9fa;
+ border: 1px solid #f8f9fa;
+ border-radius: 4px;
+ color: #3c4043;
+ font-family: arial,sans-serif;
+ font-size: 14px;
+ margin: 11px 4px;
+ padding: 0 16px;
+ line-height: 27px;
+ height: 36px;
+ min-width: 54px;
+ text-align: center;
+ cursor: pointer;
+ user-select: none
+}
+.btn-search:hover{
+ box-shadow: 0 1px 1px rgba(0,0,0,.1);
+background-color: #f8f9fa;
+border: 1px solid #dadce0;
+color: #202124
+}
+/*TERMINA ESTILOS DEL MAIN*/
+
+/*COMIENZA ESTILOS DEL FOOTER*/
+
+footer{
+ background-color: #f2f2f2;
+ height: 14%;
+ width: 100%;
+ display: flex;
+ flex-direction: column
+
+}
+
+.mexico{
+
+ height: 50%;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+ padding-left: 2%;
+ font-size: 15px;
+ border-bottom: 1px solid #dadce0;
+ color: rgba(0,0,0,.54)
+
+}
+
+.links-conteiner{
+
+ height: 50%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction: row;
+ flex-wrap: wrap;
+ padding-left: 1.5%;
+ padding-right: 1.5%
+}
+
+
+.footer-link{
+ font-size: 14px;
+ color: #70757a;
+ margin: 15px
+
+}
+
+.footer-link:hover{
+ text-decoration: underline
+}
+
+/*TERMINA ESTILOS DEL FOOTER*/
