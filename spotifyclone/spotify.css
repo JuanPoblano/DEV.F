@@ -1,0 +1,98 @@
+*{
+box-sizing: border-box;
+margin: 0%;
+padding: 0%;
+border: none;
+font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+}
+
+html,body{
+    height: 100%;
+    
+}
+
+
+#divbody{
+    
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    
+
+}
+
+main{
+    width: 100vw;
+    height:89%;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    
+}
+
+#sidemenu{
+    border: none;
+    width: 18vw;
+}
+
+#mainpage{
+    border: none;
+    width: 82vw;
+}
+
+
+
+footer{
+
+    width: 100vw;
+    height: 11%;
+    background-image:linear-gradient(90deg,#af2896,#509bf5);
+    border: none;
+}
+
+footer a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
+
+footer a div p{
+    color: white;
+    padding-left: 30px;
+}
+
+footer a div p:first-child{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+button{   
+
+    color: #2e77d0;
+    font-size: 14px;
+    padding: 8px 48px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-radius: 500px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+button:hover{
+    transform: scale(1.06);
+}
+

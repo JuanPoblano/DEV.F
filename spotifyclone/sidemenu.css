@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+}
+html,body{
+    height: 100%;
+}
+@font-face
+{
+    font-family:"CircularSpotify-UI-Latin-Bold.woff2";
+    src: url("/spotifyclone/fonts/CircularSpotify-UI-Latin-Bold.woff2"); 
+}
+
+#divbody{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    
+}
+
+header{
+
+width: 100vw;
+height: 15%;
+display: flex;
+flex-wrap: wrap;
+flex-direction:row;
+justify-content: flex-start;
+align-items: center;
+padding-left: 20px;
+
+}
+
+nav{
+    
+    width: 100vw;
+    height: 65%;
+}
+footer{
+    
+    width: 100vw;
+    height: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#logospotify{
+height: 40px;
+max-width: 131px;
+width: 100%;
+cursor: pointer;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 20px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+#botones{
+    margin-top: 46px;
+}
+
+li a span:hover{
+    color: white;
+    
+}
+
+.opciones{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    
+    border-radius: 10%;
+}
+
+span{
+    color:#b3b3b3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+    text-align: justify;
+    justify-self: center;
+    align-self: center;
+    transition: 0.5s;
+    font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+}
+div span{ 
+    margin-left: 15px;
+}
+
+
+footer div a{
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+}
+footer div a:hover{
+    text-decoration: underline;
+}
+#cookies{
+    margin-bottom: 5px;
+}
