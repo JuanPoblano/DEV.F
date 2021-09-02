@@ -1,0 +1,326 @@
+*{
+	margin: 0px;
+	padding: 0px;
+     font-family: "ArchitectsDaughter";
+}
+body{
+ background-color: #44a0d9;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;  
+
+}
+
+@font-face
+{
+   font-family: "ArchitectsDaughter";
+   src: url("../fonts/ArchitectsDaughter.ttf"); 
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    margin-top: 10px;
+    float: right;
+    display: block;
+  }
+  a img#logo{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    
+   float: right;
+   margin-top: -74px;
+   margin-right: -6px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  a img#logo{
+    display: none;
+  }
+}
+
+
+
+.topnav {
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+ 
+  text-align: center;
+  
+  text-decoration: none;
+ 
+}
+
+.topnav a:hover {
+  
+  color: black;
+}
+
+
+
+
+/* TERMINA MENU PARA MOVIL---------------------------------------- */
+
+
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    transition: background-color .5s;
+}
+
+nav{
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+   
+    margin-top: 15px;
+    height: 40px;
+    transition: margin-left .5s;
+}
+
+ul{
+    display: block;
+    float: left;
+    list-style: none;
+}
+
+ul li{
+    float: left;
+    margin: 10px;
+    padding: 2px;
+}
+ul a li:hover{
+
+  color: black;
+}
+
+ul a{
+    color: yellow;
+    text-decoration: none;
+}
+
+img#logo{
+    width: 700px;
+    height:300px;
+    float:left;
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 150px;
+    transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
+}
+
+
+#Portada{
+    background-image: url(../imgs/img2.jpg);
+    width: 100%;
+    background-attachment: contain;
+    background-position: center;
+    background-repeat: no-repeat;  
+    height: auto;
+}
+
+
+
+
+
+div#Nosotros{
+    
+    
+ width: 100%;
+ height: auto;
+ text-align: center;
+ font-size: 30px;
+  font-family: "ArchitectsDaughter";
+
+ margin-top: 100px;
+ margin-bottom: 100px;
+
+
+
+}
+#textous{
+  padding: 100px;
+}
+#SeccionServicios{
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    background-color:   #89eb83 ;
+    
+}
+.Servicios{
+    width: 100%;
+  
+
+}
+
+#tabla1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    
+}
+
+.tabla1{
+    text-align: center;
+    padding: 16px;
+    font-size: 50px;
+}
+
+
+
+.images{
+  width: 400px;
+  height: 400px;
+}
+
+
+
+#Contenedor1{
+  padding-top: 80px;
+  width: 100%;
+  height: 400px;
+  background-image: url(../imgs/contacto.jpg);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#Contenedor2{
+  width: 100%;
+  height: 300px;
+  
+}
+.titulo{
+  font-size: 32px;
+  text-align: center;
+
+
+}
+.imagenes{
+  width: 5%;
+  height: 5%;
+  float: left;
+  padding-left: 50px;
+  margin-right: 20px;
+}
+.info{
+  font-size: 20px;
+  color: #a158d8;
+ margin-left: 100px;
+
+}
+.info2{
+  
+  color: white;
+}
+.servicios{
+  
+  margin: 70px;
+}
+
+#contacto1 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    
+}
+
+.contacto1 {
+    text-align: center;
+    padding: 16px;
+}
+
+h3{
+  text-align: center;
+  font-size: 28px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: yellow;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #a158d8;
+}
+
+.container {
+    border-radius: 5px;
+    background-color:  #89eb83;
+    padding: 20px;
+}
+
+#tabla2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    
+}
+
+.tabla2{
+    text-align: center;
+    padding: 16px;
+    font-size: 50px;
+    
+}
+
+.tabla2 img{
+  width: 32px;
+  height: 32px;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    font-family: Arial;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+   
+    opacity: 0.5;
+  }
+
+
+
+
+
+
