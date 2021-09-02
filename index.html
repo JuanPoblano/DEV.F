@@ -7,11 +7,15 @@
     <meta name="description" content="">
     <link rel="icon" href="pictures/boy face.ico">
     <title>Portafolio DEV.F</title>
+    
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
 
     <style>
+        $ npm install animate.css --save
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -19,10 +23,62 @@
             -moz-user-select: none;
             user-select: none;
         }
+        .header{
+             background: rgb(2,33,80);
+background: linear-gradient(90deg, rgba(2,33,80,1) 37%, rgba(4,13,33,1) 68%, rgba(4,13,33,1) 99%); 
+
+        }
+
+        body{
+            background-color: #030c20;
+        }
+
+        .colortitle{
+        color: #9af1d1; 
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 800;
+        letter-spacing: -1.92px;
+        line-height: 68px;
+        overflow-wrap: break-word;
+        word-break: keep-all
+        
+        }
+        .textos{
+            color: #7ac8ec;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .barra{
+            background-color: #0c162d;
+        }
+
+        .album{
+            background-color:black;
+        }
+        .up{
+            text-decoration: none;
+            font-size: medium;
+            font-weight: 400;
+        }
+        .card{
+            
+            background:#022150;
+    
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.3s ease-in-out 0.1s;
+        }
+        .card:hover{
+ transform:scale(1.05);
+}
+
+
+
+
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
+                
             }
         }
     </style>
@@ -33,7 +89,7 @@
 <body>
 
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
+        <div class="collapse header" id="navbarHeader">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
@@ -55,16 +111,19 @@
                 </div>
             </div>
         </div>
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <div class="container">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+        <div class="navbar navbar-dark barra shadow-sm">
+            <div class="container barra">
+                <a href="https://platzi.com/p/Blatilpo/" target="_blank" class="navbar-brand d-flex align-items-center">
+                   <!--
+                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
                         viewBox="0 0 24 24">
-                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <path d="" />
                         <circle cx="12" cy="13" r="4" />
                     </svg>
-                    <strong>Juan Poblano</strong>
+
+                   --> 
+                    <strong style="font-style:italic; font-family: 'Noto Sans', sans-serif; ">Juan Poblano</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                     aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,8 +138,8 @@
         <section class="py-5 text-center container">
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">MY PROJECTS</h1>
-                    <p class="lead text-muted">Most of the projects are developed with HTML, CSS, JavaScript and some with Bootstrap and jQuery.
+                    <h1 class="fw-light colortitle ">MY PROJECTS</h1>
+                    <p class="lead textos">Most of the projects are developed with HTML, CSS, JavaScript and some with Bootstrap and jQuery.
                     You can also find some old projects so you can see my progress and improvement.</p>
                     <p>
                         <a href="https://github.com/JuanPoblano/DEV.F" class="btn btn-primary my-2">Repositories</a>
@@ -90,7 +149,7 @@
             </div>
         </section>
 
-        <div class="album py-5 bg-light">
+        <div class="album py-5 ">
             <div class="container">
 
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -99,16 +158,15 @@
                             <img src="pictures/Zorbing.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="" title="">
                                 
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">In 2018 I created my first business an inflatable company with the name zorbing, I could never make the website until
+                                recently, this was my first project as a web developer, I used jquery to make the interactive menu.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="zorbing/index.html" type="button" class="btn btn-sm btn-outline-secondary">See</a>
-                                        <a href="https://github.com/JuanPoblano/DEV.F/tree/main/zorbing" type="button" class="btn btn-sm btn-outline-secondary">Repository</a>
+                                        <a href="zorbing/index.html" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
+                                        <a href="https://github.com/JuanPoblano/DEV.F/tree/main/zorbing" type="button" class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">July 2021</small>
+                                    <small class="textos up">July 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -119,40 +177,37 @@
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">This is the result of using flexbox to arrange containers and form the norwegian flag, plus using css properties like
+                                transition, transform and box-shadow.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="flexboxflag/index.html" type="button" class="btn btn-sm btn-outline-secondary">See</a>
-                                        <a href="https://github.com/JuanPoblano/DEV.F/tree/main/flexboxflag" type="button" class="btn btn-sm btn-outline-secondary">Repository</a>
+                                        <a href="flexboxflag/index.html" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
+                                        <a href="https://github.com/JuanPoblano/DEV.F/tree/main/flexboxflag" type="button" class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">August 2021</small>
+                                    <small class="textos up">August 2021</small>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col ">
+                    <div class="col proyectos">
                         <div class="card shadow-sm">
                             <img src="pictures/cvweb.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt=""
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">In this website I try to make a resume but now in its web version, without losing neutrality and minimalism, I try as
+                                much as possible to make use of semantic elements and according to predefined conditions to realize the project.
+
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="my-cv-web/index.html" type="button" class="btn btn-sm btn-outline-secondary">See</a>
+                                        <a href="my-cv-web/index.html" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
                                         <a href="https://github.com/JuanPoblano/DEV.F/tree/main/my-cv-web" type="button"
-                                            class="btn btn-sm btn-outline-secondary">Repository</a>
+                                            class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">August 2021</small>
+                                    <small class="textos up">August 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -164,18 +219,15 @@
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">This is a clone of the spotify web player page, the layout is made with flexbox, One of my favorite projects and I only use html and css.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-<a href="spotifyclone/index.html" type="button" class="btn btn-sm btn-outline-secondary">See</a>
-<a href="https://github.com/JuanPoblano/DEV.F/tree/main/spotifyclone" type="button"
-    class="btn btn-sm btn-outline-secondary">Repository</a>
+                                            <a href="spotifyclone/index.html" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
+                                            <a href="https://github.com/JuanPoblano/DEV.F/tree/main/spotifyclone" type="button"
+                                            class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">August 2021</small>
+                                    <small class="textos up">August 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -188,18 +240,16 @@
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">The google search engine homepage clone is another project I also enjoyed doing, very simple and flexible. using also
+                                html and css and talking about the code, I use indicator names already defined by devf.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                    <a href="googleclone/index.html" type="button" class="btn btn-sm btn-outline-secondary">See</a>
+                                    <a href="googleclone/index.html" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
                                     <a href="https://github.com/JuanPoblano/DEV.F/tree/main/googleclone" type="button"
-                                        class="btn btn-sm btn-outline-secondary">Repository</a>
+                                        class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">August 2021</small>
+                                    <small class="textos up">August 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -211,18 +261,17 @@
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">This project, developed with the mobile first philosophy, is one of the most interesting because the site is responsive
+                                and an almost perfect clone of the Pinterest homepage, I only use html and css and for the moment is still in
+                                development.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                    <a href="https://http.cat/404" type="button" class="btn btn-sm btn-outline-secondary">See</a>
+                                    <a href="https://http.cat/404" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
                                     <a href="https://http.cat/404" type="button"
-                                        class="btn btn-sm btn-outline-secondary">Repository</a>
+                                        class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">August 2021</small>
+                                    <small class="textos up">Available Sep. 3, 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -234,18 +283,16 @@
                                 title="">
                     
                             <div class="card-body">
-                                <p class="card-text">Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de
-                                    cada proyecto
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto,
-                                    ,Aquí pondre un texto descriptivo de cada proyecto,Aquí pondre un texto descriptivo de cada proyecto
+                                <p class="card-text">Now with this new project, a website to adopt puppies, I use Bootstrap to make the website responsive, still in
+                                development.
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                    <a href="https://http.cat/404" type="button" class="btn btn-sm btn-outline-secondary">See</a>
+                                    <a href="https://http.cat/404" type="button" class="btn btn-sm btn-outline-secondary textos up">See</a>
                                     <a href="https://http.cat/404" type="button"
-                                        class="btn btn-sm btn-outline-secondary">Repository</a>
+                                        class="btn btn-sm btn-outline-secondary textos up">Repository</a>
                                     </div>
-                                    <small class="text-muted">September 2021</small>
+                                    <small class="textos up">Available Sep. 5, 2021</small>
                                 </div>
                             </div>
                         </div>
@@ -260,10 +307,10 @@
 
     </main>
 
-    <footer class="text-muted py-5">
+    <footer class="textos up py-5">
         <div class="container">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a class="up" href="#">Back to top</a>
             </p>
             <p class="mb-1">Thanks for making it this far, don't forget to smile and drink water! &#128151</p>
 
