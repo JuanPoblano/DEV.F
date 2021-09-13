@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://s.pinimg.com/webapp/favicon-54a5b2af.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pinterest Clone</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="navbar-pinterest">
+
+            <button class="iconos izq" onClick="parent.location='https://www.pinterest.com'">
+
+                <svg id="pinterest-icon" class="icon-logo" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"
+                    role="img">
+                    <path
+                        d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12">
+                    </path>
+                </svg>
+            </button>
+
+            <button class="accueil izq" onClick="parent.location='#content'">Accueil
+            </button>
+
+            <form action="https://http.cat/102">
+                <div id="busqueda">
+                    <div id="divlogo-lupa">
+                        <svg class="lupa" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 24 24"
+                            role="img">
+                            <path
+                                d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m13.12 2.88l-4.26-4.26A9.842 9.842 0 0 0 20 10c0-5.52-4.48-10-10-10S0 4.48 0 10s4.48 10 10 10c1.67 0 3.24-.41 4.62-1.14l4.26 4.26a3 3 0 0 0 4.24 0 3 3 0 0 0 0-4.24">
+                            </path>
+                        </svg>
+
+                    </div>
+
+
+                    <input id="input-search" maxlength="2048" type="text" autocapitalize="none" autocorrect="off"
+                        autocomplete="off" aria-activedescendant="" aria-autocomplete="list"
+                        aria-controls="SuggestionsMenu" aria-describedby="searchBoxAccessibleText"
+                        aria-label="Rechercher" aria-expanded="false" data-test-id="search-box-input"
+                        name="searchBoxInput" placeholder="Rechercher" role="combobox" value="">
+                    <!--onclick="document.getElementById('busqueda').style.border = '4px solid #4a8ad4'"-->
+                </div>
+
+            </form>
+            <button id="notifications" class="iconos" onClick="parent.location='https://http.cat/501'">
+
+                <svg class="icon-logo" viewBox="0 0 24 24">
+                    <path
+                        d="M12 24c-1.66 0-3-1.34-3-3h6c0 1.66-1.34 3-3 3zm7-10.83c1.58 1.52 2.67 3.55 3 5.83H2c.33-2.28 1.42-4.31 3-5.83V7c0-3.87 3.13-7 7-7s7 3.13 7 7v6.17z">
+                    </path>
+                </svg>
+            </button>
+
+            <button id="message" class="iconos dere" onClick="parent.location='https://http.cat/501'">
+
+                <svg class="icon-logo" viewBox="0 0 24 24">
+                    <path
+                        d="M18 12.5a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6 12.5M12 0C5.925 0 1 4.925 1 11c0 2.653.94 5.086 2.504 6.986L2 24l5.336-3.049A10.93 10.93 0 0 0 12 22c6.075 0 11-4.925 11-11S18.075 0 12 0">
+                    </path>
+                </svg>
+            </button>
+
+            <button id="profile-img" class="iconos dere" onClick="parent.location='https://http.cat/501'">
+
+                <img class="icon-logo" src="images/user.png" width="24" height="24">
+
+            </button>
+
+            <button id="menu-flecha" class="iconos flecha dere" onClick="parent.location='https://http.cat/501'">
+
+                <svg class="icon-logo" height="12" width="12" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                    <path
+                        d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88 2.28 0 3.14L12 19.5z">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!--LOS DOS BOTONES QUE FLOTAN ABAJO A LA DERECHA-->
+    <div class="btns-flots">
+
+        <div class="btns-coin">
+
+            <button aria-label="Ajouter une Épingle" class="btn-float" tabindex="0" type="button">
+
+                <svg class="" height="20" width="20" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img">
+                    <path d="M22 10h-8V2a2 2 0 0 0-4 0v8H2a2 2 0 0 0 0 4h8v8a2 2 0 0 0 4 0v-8h8a2 2 0 0 0 0-4">
+                    </path>
+                </svg>
+
+            </button>
+        </div>
+
+        <div class="btns-coin">
+
+            <button aria-label="Plus" class="btn-float" tabindex="0" type="button">
+
+                <svg class="" height="20" width="20" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img">
+                    <path
+                        d="M14.34 21.2c0 1.57-1.19 2.8-2.78 2.8-1.58 0-2.77-1.23-2.77-2.8 0-1.57 1.19-2.8 2.77-2.8 1.59 0 2.78 1.23 2.78 2.8m-2.53-10.88c1.41-1.23 3.3-2.05 3.3-3.87 0-1.45-1.24-2.36-2.95-2.36-2.12 0-3.52 1.48-3.55 3.43H3.75C3.88 3.3 6.96 0 12.34 0c4.86 0 7.91 2.52 7.91 6.32 0 2.36-1.09 3.81-2.3 4.78-1.68 1.33-2.84 1.89-3.49 2.61-.5.57-.62 1.04-.65 1.95H9.45c0-2.64.65-3.9 2.36-5.34">
+                    </path>
+                </svg>
+
+            </button>
+        </div>
+    </div>
+
+
+
+    <main id="content">
+
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/1618549857877881/'">
+            <div class="card-image">
+
+                <img src="images/img1.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.makeuseof.com/tag/learn-photo-editing-photoshop-get-basics-1-hour/">makeuseof.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img" onClick="parent.location='https://www.pinterest.com.mx/pin/1618549857877881/'">
+                Learn Photo Editing in Photoshop: Get the Basics Down in 1 Hour
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/492862752979228026/'">
+            <div class="card-image">
+
+                <img src="images/img2.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.allposters.com/-sp/Keep-Calm-and-Code-On-Posters_i12359963_.htm">allposters.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Poster: Keep Calm and Code On, 36x24in.
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/741968107366327014/'">
+            <div class="card-image">
+
+                <img src="images/img3.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://gritossilenciosospagina.blogspot.com/2020/09/blog-post.html">gritossilenciosospagina.blogspot.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Imágenes con Frases Positivas
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/160370436720643196/'">
+            <div class="card-image">
+
+                <img src="images/img4.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.makeuseof.com/tag/best-laptop-for-programming-coding/">makeuseof.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                The 6 Best Laptops for Programming and Coding
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/350436414763535682/'">
+            <div class="card-image">
+
+                <img src="images/img5.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.reddit.com/r/cardano/comments/kbzzp4/guys_cant_stress_it_enough_please_take_2_min_to/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&utm_term=link">reddit.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Guys can't stress it enough! Please take 2 min to cover the basics and be careful.
+
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/64387469658593697/'">
+            <div class="card-image">
+
+                <img src="images/img6.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a" href="https://pimylifeup.com/raspberry-pi-chromecast/">pimylifeup.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Raspberry Pi Chromecast using Raspicast
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/518265869610885724/'">
+            <div class="card-image">
+
+                <img src="images/img7.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="http://www.codemio.com/2016/09/html5-css3-javascript-cheat-sheets.html?m=1">codemio.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Useful HTML5 - CSS3 - JavaScript Cheat-Sheets (HD)
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/731623901948504942/'">
+            <div class="card-image">
+
+                <img src="images/img8.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://travis.media/10-vs-code-shortcuts-to-memorize-that-will-boost-your-productivity">travis.media</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                10 VS Code shortcuts to memorize that will boost your productivity - Travis Media
+
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/143833781840183723/'">
+            <div class="card-image">
+
+                <img src="images/img9.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.trustwave.com/en-us/resources/blogs/trustwave-blog/10-essential-cybersecurity-tips-for-businesses/">trustwave.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                10 Essential Cybersecurity Tips for Businesses
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/7740630599952520/'">
+            <div class="card-image">
+
+                <img src="images/img10.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://twitter.com/falla_adinda/status/1303947701529186304">twitter.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                FALLA! on Twitter
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/456904324704759193/'">
+            <div class="card-image">
+
+                <img src="images/img11.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.nobbot.com/articulos/5g-del-internet-las-personas-al-internet-las-cosas-conectadas/">nobbot.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                5G, del internet de las personas a la "conectividad ambiente" - Nobbot
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/437623288799791667/'">
+            <div class="card-image">
+
+                <img src="images/img12.png" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.codehippo.co.uk/category/programming/">codehippo.co.uk</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Programming Archives - codeHippo
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/699465385858940555/'">
+            <div class="card-image">
+
+                <img src="images/img13.png" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://pythontips.com/2018/07/02/practical-python-projects-book/">pythontips.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Practical Python Projects Book - Yasoob Khalid
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/627478160589715533/'">
+            <div class="card-image">
+
+                <img src="images/img14.png" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://t3n.de/news/adobe-illustrator-infografik-802980/adobe_illustrator_tips_tricks_infografik_vs/?ids=3ca4cdb093415a14754effc2b005a331">t3n.de</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                IT-News im Überblick | t3n – digital pioneers
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/68679963057406650/'">
+            <div class="card-image">
+
+                <img src="images/img15.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://mikkegoes.com/youtube-channels-learn-python/">mikkegoes.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                19 Best YouTube Channels to Learn Python for Beginners (in 2021)
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/342695852901325688/'">
+            <div class="card-image">
+
+                <img src="images/img16.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.reddit.com/r/coolguides/comments/e0ly9s/if_youre_like_me_and_need_more_than_7_songs_to/">reddit.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                if you’re like me and need more than 7 songs to listen to
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/673710425512468934/'">
+            <div class="card-image">
+
+                <img src="images/img17.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://frugalyabundante.com/2018/04/29/como-ahorrar-dinero-en-pasatiempos/">frugalyabundante.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                CÓMO AHORRAR DINERO EN PASATIEMPOS GRATIS - FrugalyAbundante
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/20125529575163923/'">
+            <div class="card-image">
+
+                <img src="images/img18.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://mikkegoes.com/computer-programming-languages-for-beginners/">mikkegoes.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                4 Best Computer Programming Languages for Beginners in 2020
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/195273333833771950/'">
+            <div class="card-image">
+
+                <img src="images/img19.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.ellduclos.blog/50-questions-best-self/">ellduclos.blog</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                50 Questions to Answer to Find Your Best Self - Personal Growth
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/140806227892755/'">
+            <div class="card-image">
+
+                <img src="images/img20.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.dananicoledesigns.com/become-a-graphic-designer-without-going-to-school/">dananicoledesigns.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                5 FREE and Simple Steps to Learn Graphic Design for Beginners
+
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/651825746050507902/'">
+            <div class="card-image">
+
+                <img src="images/img21.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://travis.media/make-extra-money-on-upwork-while-learning-to-code">travis.media</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                How to Make Extra Money On Upwork While Learning To Code - Travis Media
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/124200902213585721/'">
+            <div class="card-image">
+
+                <img src="images/img22.png" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.geeksforgeeks.org/10-useful-chrome-extension-for-web-developers-and-designers/">geeksforgeeks.org</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                10 Useful Chrome Extension For Web Developers And Designers
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/861172760004131315/'">
+            <div class="card-image">
+
+                <img src="images/img23.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.spanishpublishers.net/Aprender-a-aprender-en">spanishpublishers.net</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Aprender a aprender
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/835277062129177036/'">
+            <div class="card-image">
+
+                <img src="images/img24.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://makeawebsitehub.com/learn-to-code-for-free/">makeawebsitehub.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                22 Places to Learn to Code for Free in 2021 - Make A Website Hub
+
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/850617448354258901/'">
+            <div class="card-image">
+
+                <img src="images/img25.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a" href="https://lifezeazy.com/skills-to-learn">lifezeazy.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                17 Cool Skills you can learn in your free time
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/527132331386291039/'">
+            <div class="card-image">
+
+                <img src="images/img26.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a" href="https://code-boxx.com/simple-php-mvc-example/">code-boxx.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                PHP MVC With Database - Very Simple Beginner Example
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/813603488932372623/'">
+            <div class="card-image">
+
+                <img src="images/img27.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="http://lifehacksthatwork.com/free-online-courses-with-certificates-cv-building/">lifehacksthatwork.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Free Online Courses With Certificates - CV Building - Life Hacks
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/174021973090048256/'">
+            <div class="card-image">
+
+                <img src="images/img28.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="http://tecnicoenformacion.blogspot.com.es/2016/05/infografia-no-publiques-en-internet.html">tecnicoenformacion.blogspot.com.es</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Infografia: no publiques en Internet
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/645844402821000990/'">
+            <div class="card-image">
+
+                <img src="images/img29.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="http://blog.hipbaby.com/2016/02/words-of-wisdom.html?m=1">blog.hipbaby.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Words of Wisdom.
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/400468591875438225/'">
+            <div class="card-image">
+
+                <img src="images/img30.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.comment-economiser.fr/tableau-des-taches-manageres-par-age-pour-auntonomie.html">comment-economiser.fr</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Le Tableau Des Tâches Âge Par Âge Pour Favoriser l'Autonomie Des Enfants !
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/2322237297666993/'">
+            <div class="card-image">
+
+                <img src="images/img31.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a" href="https://edukite.org/courses">edukite.org</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                3500+ Free Courses
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/282108364149593179/'">
+            <div class="card-image">
+
+                <img src="images/img32.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://lifezeazy.com/skills-to-learn-to-make-money/">lifezeazy.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                9 Popular Skills to Learn to Make Money Even in Your Bad Time!
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/328059154102223103/'">
+            <div class="card-image">
+
+                <img src="images/img33.png" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://www.electronicslovers.com/2018/10/program-arduino-board-by-using-smartphone.html">electronicslovers.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                Learn How to Program Arduino Board by Using Smartphone
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+        <!-- INICIA IMAGEN-->
+        <div class="container1 card-image"
+            onClick="parent.location='https://www.pinterest.com.mx/pin/351912460094328/'">
+            <div class="card-image">
+
+                <img src="images/img34.jpg" alt="imagen" class="image" width="236px" height="auto">
+                <div class="middle">
+
+
+                    <button class="accueil btn-profil profil-btn"
+                        onClick="parent.location='https://www.pinterest.com'">Profil
+                        <svg id="perfil-flecha" class="icon-logo " height="12" width="12" viewBox="0 0 24 24"
+                            aria-hidden="true" role="img">
+                            <path d="M12 19.5L.66 8.29c-.88-.86-.88-2.27 0-3.14.88-.87 2.3-.87 3.18 0L12 13.21l8.16-8.06c.88-.87 2.3-.87 3.18 0 .88.87.88
+                                2.28 0 3.14L12 19.5z">
+                            </path>
+                        </svg>
+
+                    </button>
+
+                    <button class="accueil btn-profil guardar"
+                        onClick="parent.location='https://www.pinterest.com'">Enregistrer</button>
+
+                    <button class="fuente btn-logo btn-fuente" onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="fuente1" height="9" width="9" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                            <path
+                                d="M4.9283,1 C3.6273,1 2.5713,2.054 2.5713,3.357 C2.5713,4.66 3.6273,5.714 4.9283,5.714 L14.9523,5.714 L1.6893,18.976 C0.7703,19.896 0.7703,21.389 1.6893,22.31 C2.1503,22.771 2.7533,23 3.3573,23 C3.9603,23 4.5633,22.771 5.0243,22.31 L18.2853,9.047 L18.2853,19.071 C18.2853,20.374 19.3413,21.429 20.6433,21.429 C21.9443,21.429 23.0003,20.374 23.0003,19.071 L23.0003,1 L4.9283,1 Z">
+                            </path>
+                        </svg>
+                        <a class="fuentes-a"
+                            href="https://cyber4geeks.com/best-torrent-sites-for-ebooks/">cyber4geeks.com</a>
+                    </button>
+
+                    <button class="iconos menus btn-logo btn-enviar"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo enviar" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button class="iconos menus btn-logo btn-trespuntos"
+                        onClick="parent.location='https://www.pinterest.com'">
+
+                        <svg class="icon-logo trespuntos" height="16" width="16" viewBox="0 0 24 24" aria-hidden="true"
+                            role="img">
+                            <path
+                                d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="titulo-img">
+                24 Best Sites To Download FREE BOOKS in 2019
+            </div>
+        </div>
+        <!-- TERMINA IMAGEN-->
+
+    </main>
+
+</body>
+
+</html>

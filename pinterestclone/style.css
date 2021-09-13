@@ -1,0 +1,449 @@
+/*RESET CSS*/
+:root {
+  --letra:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, ＭＳ Ｐゴシック, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+ box-sizing: border-box;
+ text-decoration: none
+}
+a:link, a:visited, a:hover, a:active {
+  
+  color: rgb(33, 25, 34);
+  text-decoration: none;
+
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block
+}
+
+/*FIN DEL RESET */
+
+/*INICIAN ESTILOS DEL HEADER DE LA PAGINA*/
+
+header{
+   background-color: white;
+    width: 100%;
+   position: fixed;
+   z-index: 1;
+}
+
+#navbar-pinterest{
+    display: flex;
+    
+    align-items: center;
+    padding: 15px;
+}
+
+.iconos{
+ display: flex;
+ width: 3rem;
+ height: 3rem;
+ border-radius: 500%;
+ justify-content: center;
+ align-items: center;
+ border: none;
+ background-color: transparent
+}
+.flecha{
+    width: 24px;
+ height: 24px;
+}
+.iconos:hover{
+background-color: #dfe1e2;
+}
+
+.icon-logo{
+ fill: #5f6368;
+ cursor: pointer;
+ width: 24px;
+ height: auto;
+}
+#pinterest-icon{
+    fill: rgb(230, 0, 35);
+}
+.accueil{
+background-color: rgb(17, 17, 17);
+border: none;
+width: 86.5px;
+height: 48px;
+text-align: center;
+-moz-border-radius: 24px;
+border-radius: 24px;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+font-weight: 700;
+font-size: 48px;
+font-family: var(--letra);
+font-size: 16px;
+white-space: nowrap;
+-moz-text-size-adjust: none;
+}
+
+form{
+background-color: #efefef;
+min-width: 0px;
+width: 75%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 24px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+#busqueda{
+width: 100%;
+cursor: auto;
+display: flex;
+box-shadow: none;
+border-radius: 24px;
+height: 48px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+border: 4px solid transparent;
+}
+#busqueda:hover{
+  background-color: #dfe1e2 ;
+}
+.lupa{
+ fill: #767676;
+ margin-left: 15px;
+}
+#input-search{
+ background-color:transparent;
+ margin: 0;
+ padding: 0;
+ word-wrap: break-word;
+ outline: none;
+ -webkit-tap-highlight-color: transparent;
+ margin-left: 10px;
+ border:none;
+ color:#333;
+ font-size:14px;
+ font-weight:normal;
+ height:100%;
+ outline:none;
+ width:100%;
+}
+#busqueda:active{
+    border: 4px solid #4a8ad4;
+}
+
+.dere{
+   
+    justify-self: flex-end;
+}
+/*TERMINAN ESTILOS DE HEADER */
+
+.btns-flots{
+  background-color:transparent;
+  width: fit-content;
+  position: fixed;
+  bottom: 3%;
+  right: 1.5%;
+  z-index: 2;
+}
+.btns-coin{
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:fit-content;
+}
+
+.btns-flots button{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+border: none;
+display: flex;
+margin-top: 5px;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+background-color: white;
+
+filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 0px 8px);
+
+}
+
+.btn-float:hover {
+  background-color: #dfe1e2;
+}
+
+/*INICIAN ESTILOS DE MAIN CON IMAGENES*/
+img {
+  max-width:100%;
+  vertical-align: middle;
+}
+
+#content{
+    
+    padding-top: 88px;
+    width: 95%;
+    margin: auto;
+    
+    column-gap: 0px; 
+}
+
+.card-image {
+            position: relative;
+            
+            box-sizing: border-box;
+            background-color:#333;
+            width: 236px;
+            height: fit-content;
+            border-radius: 16px;   
+        }
+        .container1{
+            border-radius: 16px;
+            border: none;
+              background-color: white;
+            display: inline-block;
+            margin-left:4%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            max-width: 236px;
+            height: auto;
+            border-radius: 16px;       
+        }
+
+        .middle {
+           
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            height: 200px;
+            width: 236px;
+            height: 100%;
+            text-align: center;
+         display: grid;
+         grid-template-columns: 118px 39.33px 39.33px 39.33px ;
+         grid-template-rows: 48px 33px;
+         align-content: space-between;
+         padding-bottom: 10px;  
+        }
+
+        .card-image:hover .image {
+            opacity: 0.6;
+            cursor: zoom-in;  
+        }
+
+        .card-image:hover .middle {
+            opacity: 1;
+            cursor: zoom-in;
+        }
+        
+        .titulo-img{
+            color: rgb(17, 17, 17);
+            height: 38px;
+            cursor: zoom-in;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: var(--letra);
+            max-width: 100%;
+            overflow-wrap: break-word;
+            overflow: hidden;
+            word-break: break-word;
+            text-align: justify;
+            
+            text-align: left;
+            pointer-events: auto;
+            
+            margin-left: 5px;
+            margin-bottom: 10%;
+            margin-top: 8px;
+        }
+
+/*INICIAN ESTILOS BOTONES DE LA IMAGEN CUANDO SE HACE HOVER*/
+
+
+        .btn-profil{
+            width: 114px;   
+        }
+        .guardar{
+            background-color:#e60023;
+            grid-column: 2/4;
+            margin-top: 10px;  
+        }
+        .guardar:hover{
+            background-color:rgb(173, 8, 27);
+        }
+        .profil-btn{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 10px;
+            background-color: initial;
+        }
+
+        .menus{
+            width: 32px;
+            height: 32px;
+        }
+
+        #perfil-flecha{
+            fill: white;
+            width: 12px;
+            height: 12px;
+            margin-left: 5px;
+        }
+        .fuente{
+            width: 132px;
+            height: 33px;
+            border-radius: 24px;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            justify-content: space-between;
+            display: flex;
+            
+            align-items: center;      
+        }
+
+        .fuentes-a{
+            text-decoration: none;
+            color: rgb(33, 25, 34);
+            margin-left: 5px;
+            width: 85%;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .fuente1{
+         width: 15%;
+         display: block;    
+        }
+        
+        .btn-logo{
+           /* background-color: #dfe1e2;*/
+            background-color: white;
+            opacity: 0.9;            
+        }
+        .trespuntos, .enviar{
+            fill: black;           
+        }
+
+        .btn-logo:hover{
+/*background-color: white; */
+opacity: 1;
+background-color: white;
+}
+
+.btn-trespuntos{
+grid-column: 4/4;
+
+}
+
+.btn-fuente{
+    grid-column: 1/2;
+    margin-left: 5px;    
+}
+.btn-enviar {
+    grid-column: 3/4;   
+}
+
+/* MEDIAS DISPOSTIVOS */
+
+  @media only screen and (max-width: 767px){
+  #content {
+    column-count: 1; 
+    padding: auto;
+    margin: auto;
+    width: 60%;
+     }
+     .accueil{
+      background-color: initial;
+      color: black;
+  }
+
+  .accueil:hover{
+      background-color: #dfe1e2;
+  }
+   }
+
+  @media only screen and (min-width: 540px) and (max-width: 720px) {
+  #content {
+    column-count: 2;
+    width: 90%;
+  }
+  .accueil{
+      background-color: initial;
+      color: black;
+  }
+
+  .accueil:hover{
+      background-color: #dfe1e2;
+  }
+
+   }
+
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  #content {
+    column-count: 3;
+  }
+  .accueil{
+      background-color: initial;
+      color: black;
+  }
+
+  .accueil:hover{
+      background-color: #dfe1e2;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  #content {
+    column-count: 4;
+    width: 100%;
+    
+    
+  }
+}
+ @media only screen and (min-width: 1024px) {
+  
+  #content {
+    column-count: 5;
+    width: 95%;
+  }
+}
+
+
+@media only screen and (min-width: 1920px)  {
+  #content {
+    column-count: 8;
+    width: 100%;
+    
+  }
+}
