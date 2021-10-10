@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANK DEVS ATM</title>
+    <link rel="shortcut icon" href="./picture.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/cosmogicofficial/quantumalert@latest/minfile/quantumalert.js"
+        charset="utf-8"></script>
+</head>
+<body>
+
+    <div id="portada">
+        <figure class="logo-fig">
+            <img src="picture.png" width="200" height="200">
+            <figcaption>BANK DEVS</figcaption>
+        </figure>
+        <p class="msg">Welcome</p>
+        <button class="botones" onclick="signInPortada()">SIGN IN</button>
+    </div>
+    
+    <article id="page-sesion">
+        <h1>Please choose your username and password</h1>
+        <form id="ingreso" action="#" onsubmit="getUserOption();return false">
+            <label for="usuario">Sign In:</label> <Br>
+            <select id="usuario" name="usuario">
+                <option value="0">Select User</option> 
+            </select> <br>
+            <label for="password">PIN:</label> <br>
+            <input type="password" id="password" placeholder="Test:1234,2345,3456" name="password" />
+            <p id="message-error">Enter a valid username or password, and try again</p>
+            <br>
+            <input type="submit" class="botones" id="BtnIngreso" value="Sign in" />
+        </form> 
+    </article>
+    
+    <article id="page-cuenta"> 
+        <section class="secciones">
+            <button class="botones secc"  value="deposit">Deposit</button>
+            <button class="botones secc " value="withdraw">Withdraw</button>
+            <button class="botones secc"  value="balance">Check balance</button>
+            <button class="botones secc" onclick="closeSesion()">Logout</button>
+        </section>  
+    </article>
+    
+<article id="pageFunctions">
+        
+        <div class="keypad-Screen">
+            
+            <input type="text" class="screen" value="" disabled />
+        
+            <div class="keys">
+                <button class="keys-btn" type="button" value="1">1</button>
+                <button class="keys-btn" type="button" value="2">2</button>
+                <button class="keys-btn" type="button" value="3">3</button>     
+                <button class="keys-btn" type="button" value="4">4</button>
+                <button class="keys-btn" type="button" value="5">5</button>
+                <button class="keys-btn" type="button" value="6">6</button>
+                <button class="keys-btn" type="button" value="7">7</button>
+                <button class="keys-btn" type="button" value="8">8</button>
+                <button class="keys-btn" type="button" value="9">9</button>
+                <button class="keys-btn" type="button" value="0">0</button>
+                <button type="button" class="clear-screen" value="all-clear">Delete</button>
+                <button id="btn-enter" type="button" class="btn-enter"  value="">Enter</button>
+                <button id="btn-back" type="button" class="btn-enter" onclick="backToMenu()" >Back to Menu</button>
+            </div>
+    </article>
+
+    <article id="pageSaldo">
+        <button type="button" class="btn-enter" onclick="backToMenu()">Back to Menu</button>
+    </article>
+    <script src="./app.js" charset="utf-8" defer sync></script>
+</body>
+</html>

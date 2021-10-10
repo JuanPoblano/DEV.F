@@ -1,0 +1,25 @@
+* {
+margin:0px;
+padding: 0px;
+box-sizing: border-box;
+}
+table{
+    background-color: beige;
+    margin: auto;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+td{
+    margin: 3px;
+    border: 1px solid rebeccapurple;
+}
+th{
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+    border: 1px dashed darkgreen;
+}
+.titulo-tabla{
+    width: fit-content;
+}
